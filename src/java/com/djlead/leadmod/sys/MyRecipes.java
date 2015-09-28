@@ -15,6 +15,6 @@ public class MyRecipes {
 
         GameRegistry.addShapelessRecipe(new ItemStack(MyBlocks.rocklight), new ItemStack(MyItems.impossibrium), new ItemStack(MyItems.impossibrium));
 
-GameRegistry.addSmelting(new ItemStack(MyItems.hardtofindium), new ItemStack(MyItems.impossibrium), 0.5F);
+        GameRegistry.addSmelting(new ItemStack(MyItems.hardtofindium), new ItemStack(MyItems.impossibrium), 0.5F);
     }
 }
