@@ -6,7 +6,6 @@ package com.djlead.leadmod.items;
 public class UnobtainiumShard extends ItemL {
     public UnobtainiumShard() {
         super();
-        this.maxStackSize = 32;
         this.setUnlocalizedName("UnobtainiumShard");
 //        this.setNoRepair();
 

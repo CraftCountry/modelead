@@ -40,7 +40,7 @@ public class Main {
 
     public static final Item.ToolMaterial djToolMaterial = EnumHelper.addToolMaterial("djToolMaterial", 4, 2000, 15.0F, 3.0F, 30 );
 
-            // material, harvastlevel, max uses, efficiency, damage, enchantability
+                                                                 // material, harvastlevel, max uses, efficiency, damage, enchantability
     // harvastlevel : diamond = 3, iron = 2
     // maxUses : diamond = 1560
     // efficiency : diamond = 8.0F, stone 4.0F, iton = 6.0F
@@ -54,15 +54,12 @@ public class Main {
     public void preInit(FMLPreInitializationEvent event) {
 
         // Initialize and register Custom Items & blocks
-        MyItems.init();
+
         MyBlocks.init();
+        MyItems.init();
+
 
         GameRegistry.registerWorldGenerator(new OreGen(), 0);
-
-        whishApple = new ItemFood(8, 0.5F, false).setUnlocalizedName("WhishApple").setTextureName("leadmod:whishapple");
-        GameRegistry.registerItem(whishApple, whishApple.getUnlocalizedName().substring(5));
-
-      //  djSword = new DjSword(djToolMaterial);
 
         LogOut.info("Pre Init Complete");
 

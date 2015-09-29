@@ -7,7 +7,6 @@ public class UnobtainiumFragment extends ItemL {
 
     public UnobtainiumFragment() {
         super();
-        this.maxStackSize = 32;
         this.setUnlocalizedName("UnobtainiumFragment");
 //        this.setNoRepair();
 

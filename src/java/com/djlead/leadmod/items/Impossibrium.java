@@ -7,9 +7,7 @@ public class Impossibrium extends ItemL {
 
     public Impossibrium() {
         super();
-        this.maxStackSize = 4;
+        this.maxStackSize = 16;
         this.setUnlocalizedName("Impossibrium");
-//        this.setNoRepair();
-
     }
 }

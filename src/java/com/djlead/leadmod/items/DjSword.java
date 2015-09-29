@@ -1,6 +1,8 @@
 package com.djlead.leadmod.items;
 
-import net.minecraft.item.ItemPickaxe;
+import com.djlead.leadmod.Reference;
+import com.djlead.leadmod.sys.MyItems;
+import com.djlead.leadmod.sys.MyTab;
 import net.minecraft.item.ItemSword;
 
 /**
@@ -8,8 +10,10 @@ import net.minecraft.item.ItemSword;
  */
 public class DjSword extends ItemSword {
 
-    public DjSword(ToolMaterial material) {
-        super(material);
+    public DjSword() {
+        super(MyItems.whishAlloy);
+        this.setUnlocalizedName("djsword");
+        this.setTextureName(Reference.MODID + ":" + "djsword");
+        this.setCreativeTab(MyTab.CreaTab);
     }
-
 }

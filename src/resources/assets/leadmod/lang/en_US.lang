@@ -1,10 +1,15 @@
 item.leadmod:UnobtainiumShard.name=Unobtainium Shard
 item.leadmod:UnobtainiumFragment.name=Unobtainium Fragment
 item.leadmod:UnobtainiumPart.name=Unobtainium Part
+item.leadmod:Unobtainium.name=Unobtainium
 item.leadmod:Hardtofindium.name=Hardtofindium
 item.leadmod:Impossibrium.name=Impossibrium
 item.leadmod:WhishAlloy.name=Whish Alloy
-item.WhishApple.name=Whish Apple
+
+item.djsword.name=DJ Sword
+item.djpickaxe.name=DJ Pickaxe
+item.whishapple.name=Whish Apple
+item.thoughtapple.name=Thought Apple
 
 tile.leadmod:rocklight.name=Rocky Light
 tile.leadmod:unobtainiumore.name=Unobtainium Ore
