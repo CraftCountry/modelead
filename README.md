@@ -18,3 +18,6 @@ One of the very few rare earth metals is Whish Alloy, it is used to make the mos
 Apples are good for your healt, you've found a way to upgrade them to a Thought Apple. These will also fill your needs with the hunger bar full.
 
 An upgraded version, the Whish Apple, fills you up like crazy and leaves behind some proper effects.
+
+# Lead Biome
+There are still nice places on the map to explore...
