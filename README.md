@@ -12,4 +12,4 @@ To be filled in exactly
 # Tools
 One of the very few rare earth metals is Whish Alloy, it is used to make the most powerfull tools
 - Whish Sword
-- Whis Pickaxe
+- Whish Pickaxe
