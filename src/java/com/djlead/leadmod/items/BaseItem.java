@@ -8,13 +8,13 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-/** ItemL - Master Item, this sets the defaults for all items
+/** BaseItem - Master Item, this sets the defaults for all items
  * Created by Lead on 19-9-2015.
  */
 
-public class ItemL extends Item {
+public class BaseItem extends Item {
 
-    public ItemL() {
+    public BaseItem() {
         super();
         this.setCreativeTab(MyTab.CreaTab);
 

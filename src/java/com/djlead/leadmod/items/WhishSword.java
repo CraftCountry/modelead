@@ -8,9 +8,9 @@ import net.minecraft.item.ItemSword;
 /**
  * Created by Lead on 27-9-2015.
  */
-public class DjSword extends ItemSword {
+public class WhishSword extends ItemSword {
 
-    public DjSword() {
+    public WhishSword() {
         super(MyItems.whishAlloy);
         this.setUnlocalizedName("djsword");
         this.setTextureName(Reference.MODID + ":" + "djsword");

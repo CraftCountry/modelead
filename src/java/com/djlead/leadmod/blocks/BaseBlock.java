@@ -8,17 +8,17 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
-/** BlockL All generated blocks
+/** BaseBlock All generated blocks
  * Created by Lead on 21-9-2015.
  */
-public class BlockL extends Block {
+public class BaseBlock extends Block {
 
-    public BlockL(Material material){
+    public BaseBlock(Material material){
         super(material);
         this.setCreativeTab(MyTab.CreaTab);
     }
 
-    public BlockL(){
+    public BaseBlock(){
         this(Material.rock);
         this.setCreativeTab(MyTab.CreaTab);
     }

@@ -5,7 +5,6 @@ package com.djlead.leadmod;
 
 import com.djlead.leadmod.biome.BiomeRegistry;
 import com.djlead.leadmod.biome.WorldTypeLead;
-import com.djlead.leadmod.items.DjSword;
 import com.djlead.leadmod.proxy.CommonProxy;
 import com.djlead.leadmod.sys.*;
 import cpw.mods.fml.common.Mod;
@@ -15,7 +14,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.WorldType;
 import net.minecraftforge.common.MinecraftForge;
@@ -66,7 +64,7 @@ public class Main {
     public void init(FMLInitializationEvent event) {
         // Add custom recipes
         MyRecipes.init();
-        MinecraftForge.addGrassSeed(new ItemStack(MyItems.dealSeed), 10);
+        MinecraftForge.addGrassSeed(new ItemStack(MyItems.dealSeed), 2);
         LogOut.info("Init Complete");
     }
 

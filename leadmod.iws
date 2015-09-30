@@ -36,8 +36,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DjSword.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/DjSword.java">
+      <file leaf-file-name="WhishSword.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishSword.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="52" />
@@ -48,8 +48,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DjPickaxe.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/DjPickaxe.java">
+      <file leaf-file-name="WhishPickaxe.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishPickaxe.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
@@ -80,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44256756">
-              <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -110,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyBlocks.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyBlocks.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/sys/MyBlocks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.19642857">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,20 +151,20 @@
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/items/DjSword.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/sys/MyRecipes.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/sys/OreGen.java" />
-        <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishApple.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/biome/BiomeRegistry.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/biome/WorldTypeLead.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/biome/LeadGenLayerBiome.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/biome/BiomeGenLead.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishAlloy.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/items/DealSeed.java" />
-        <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/sys/MyBlocks.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/blocks/UnobtainiumOre.java" />
         <option value="$PROJECT_DIR$/src/resources/assets/leadmod/lang/en_US.lang" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/sys/MyItems.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/items/DjPickaxe.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/blocks/DealCrop.java" />
         <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/Main.java" />
+        <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishApple.java" />
+        <option value="$PROJECT_DIR$/src/java/com/djlead/leadmod/sys/MyBlocks.java" />
       </list>
     </option>
   </component>
@@ -732,7 +732,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -742,10 +742,11 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15884861" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -756,7 +757,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -775,7 +775,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/DjSword.java</url>
+          <url>file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishSword.java</url>
           <line>2</line>
           <properties />
           <option name="timeStamp" value="1" />
@@ -824,7 +824,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/DjPickaxe.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishPickaxe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
@@ -840,7 +840,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/DjSword.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishSword.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -872,7 +872,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/ItemL.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/BaseItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44594595">
           <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="43" />
@@ -1109,7 +1109,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/DjSword.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishSword.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="52" />
@@ -1139,7 +1139,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/DjPickaxe.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishPickaxe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
@@ -1173,15 +1173,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishApple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="72" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/blocks/BlockL.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/blocks/BaseBlock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.074324325">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -1199,21 +1191,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/sys/MyBlocks.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="66" column="70" selection-start-line="66" selection-start-column="70" selection-end-line="66" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/items/WhishApple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44256756">
-          <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="72" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/djlead/leadmod/sys/MyBlocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19642857">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

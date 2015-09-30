@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * Created by Lead on 26-9-2015.
  */
-public class RockLight extends BlockL {
+public class RockLight extends BaseBlock {
 
     public RockLight() {
         super();

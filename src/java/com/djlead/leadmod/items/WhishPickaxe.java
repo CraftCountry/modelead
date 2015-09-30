@@ -8,8 +8,8 @@ import net.minecraft.item.ItemPickaxe;
 /**
  * Created by Lead on 28-9-2015.
  */
-public class DjPickaxe extends ItemPickaxe {
-    public DjPickaxe() {
+public class WhishPickaxe extends ItemPickaxe {
+    public WhishPickaxe() {
         super(MyItems.whishAlloy);
         this.setUnlocalizedName("djpickaxe");
         this.setTextureName(Reference.MODID + ":" + "djpickaxe");

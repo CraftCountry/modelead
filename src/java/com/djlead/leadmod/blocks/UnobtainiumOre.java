@@ -10,7 +10,7 @@ import java.util.ArrayList;
 /**
  * Created by Lead on 27-9-2015.
  */
-public class UnobtainiumOre extends BlockL {
+public class UnobtainiumOre extends BaseBlock {
 
     public UnobtainiumOre() {
         super();

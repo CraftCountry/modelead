@@ -20,16 +20,16 @@ public class MyItems {
     //    gold                      32          12.0F           4.0F            22
 
 
-    //  public static final ItemL ring = new LeadRing();
-    public static final ItemL unobtainiumShard = new UnobtainiumShard();
-    public static final ItemL unobtainiumFragment = new UnobtainiumFragment();
-    public static final ItemL unobtainiumPart = new UnobtainiumPart();
-    public static final ItemL unobtainium = new Unobtainium();
-    public static final ItemL hardtofindium = new Hardtofindium();
-    public static final ItemL impossibrium = new Impossibrium();
-    public static final ItemL wishAlloy = new WhishAlloy();
-    public static final ItemPickaxe djPickaxe = new DjPickaxe();
-    public static final ItemSword djSword = new DjSword();
+    //  public static final BaseItem ring = new LeadRing();
+    public static final BaseItem unobtainiumShard = new UnobtainiumShard();
+    public static final BaseItem unobtainiumFragment = new UnobtainiumFragment();
+    public static final BaseItem unobtainiumPart = new UnobtainiumPart();
+    public static final BaseItem unobtainium = new Unobtainium();
+    public static final BaseItem hardtofindium = new Hardtofindium();
+    public static final BaseItem impossibrium = new Impossibrium();
+    public static final BaseItem wishAlloy = new WhishAlloy();
+    public static final ItemPickaxe djPickaxe = new WhishPickaxe();
+    public static final ItemSword djSword = new WhishSword();
     public static final ItemSeeds dealSeed = new DealSeed();
 
 
@@ -45,8 +45,8 @@ public class MyItems {
         GameRegistry.registerItem(hardtofindium, "Hardtofindium");
         GameRegistry.registerItem(impossibrium, "Impossibrium");
         GameRegistry.registerItem(wishAlloy, "WhishAlloy");
-        GameRegistry.registerItem(djPickaxe, "DjPickaxe");
-        GameRegistry.registerItem(djSword, "DjSword");
+        GameRegistry.registerItem(djPickaxe, "WhishPickaxe");
+        GameRegistry.registerItem(djSword, "WhishSword");
         GameRegistry.registerItem(dealSeed, "DealSeed");
 
         GameRegistry.registerItem(thoughtApple , "ThoughtApple");
