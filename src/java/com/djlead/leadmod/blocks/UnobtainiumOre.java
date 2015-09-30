@@ -2,12 +2,10 @@ package com.djlead.leadmod.blocks;
 
 import com.djlead.leadmod.sys.MyItems;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 /**
  * Created by Lead on 27-9-2015.

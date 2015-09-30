@@ -4,7 +4,6 @@ import com.djlead.leadmod.Reference;
 import com.djlead.leadmod.sys.MyItems;
 import com.djlead.leadmod.sys.MyTab;
 import net.minecraft.item.ItemPickaxe;
-import net.minecraft.item.ItemStack;
 
 /**
  * Created by Lead on 28-9-2015.

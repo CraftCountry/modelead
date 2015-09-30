@@ -37,10 +37,13 @@ public class WhishApple extends ItemFood {
     protected void onFoodEaten(ItemStack stack, World world, EntityPlayer player) {
         super.onFoodEaten(stack, world, player);
 
-        // apply potion effects                 potion name , time in ticks , from beacon , getAmbient()
-        player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 1200, 1, false));
-        player.addPotionEffect(new PotionEffect(Potion.jump.id, 1200, 0, false));
-        player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 3600, 1, false));
+        // apply potion effects                 potion name , time in ticks , powerlevel (0-3) , getAmbient()
+        player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 1200, 3, true));
+        player.addPotionEffect(new PotionEffect(Potion.jump.id, 1200, 3, false));
+        player.addPotionEffect(new PotionEffect(Potion.resistance.id, 3600, 3, false));
+        player.addPotionEffect(new PotionEffect(Potion.regeneration.id, 3600, 3, false));
+
+
     }
 }
 

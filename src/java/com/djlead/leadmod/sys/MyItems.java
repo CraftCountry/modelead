@@ -2,10 +2,7 @@ package com.djlead.leadmod.sys;
 
 import com.djlead.leadmod.items.*;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemPickaxe;
-import net.minecraft.item.ItemSword;
+import net.minecraft.item.*;
 import net.minecraftforge.common.util.EnumHelper;
 
 /** Register and Init all Items and Food
@@ -33,6 +30,7 @@ public class MyItems {
     public static final ItemL wishAlloy = new WhishAlloy();
     public static final ItemPickaxe djPickaxe = new DjPickaxe();
     public static final ItemSword djSword = new DjSword();
+    public static final ItemSeeds dealSeed = new DealSeed();
 
 
     // Food
@@ -49,6 +47,7 @@ public class MyItems {
         GameRegistry.registerItem(wishAlloy, "WhishAlloy");
         GameRegistry.registerItem(djPickaxe, "DjPickaxe");
         GameRegistry.registerItem(djSword, "DjSword");
+        GameRegistry.registerItem(dealSeed, "DealSeed");
 
         GameRegistry.registerItem(thoughtApple , "ThoughtApple");
         GameRegistry.registerItem(whishApple, "WhishApple");
