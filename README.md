@@ -21,3 +21,6 @@ An upgraded version, the Whish Apple, fills you up like crazy and leaves behind 
 
 # Lead Biome
 There are still nice places on the map to explore...
+
+# Armor
+When you finally have Whish Armor, it's time to make some decent armor from it
