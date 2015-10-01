@@ -7,7 +7,7 @@ New items and features are added continiously...
 Amongst the tall grass you can find rare seeds that will grow the Deal Crops. When full grown they will drop a new seed and an Unobtainium Sharp.
 
 # Unobtainium progression
-Unobtainium can be found is small quantities in the deepest crevices of the world. The orad to follow to make something usefull out of it is hard and long. It also requires a shitload of resources and time, but the final result is satisfying.
+Unobtainium can be found is small quantities in the deepest crevices of the world and in random places in lava in the Nether. The orad to follow to make something usefull out of it is hard and long. It also requires a shitload of resources and time, but the final result is satisfying.
 
 # Tools
 One of the very few rare earth metals is Whish Alloy, it is used to make the most powerfull tools
