@@ -38,12 +38,12 @@ public class OreGen implements IWorldGenerator{
     }
 
     public void generateOverworld(World world, Random random, int x, int z){
-        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 2, 10, 50, 3, 100, Blocks.stone);
-        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 2, 10, 25, 3, 100, Blocks.grass);
+        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 1, 2, 50, 11, 27, Blocks.stone);
+//        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 2, 10, 25, 3, 100, Blocks.grass);
     }
 
     public void generateEnd(World world, Random random, int x, int z){
-        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 2, 10, 5, 3, 100, Blocks.end_stone);
+        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 2, 10, 5, 20, 60, Blocks.end_stone);
     }
 
     public void generateOre(Block block, World world, Random random, int chunkX, int chunkZ, int minVeinSize, int maxVeinSize, int chance, int minY, int maxY, Block generateIn) {

@@ -14,5 +14,5 @@ public class WhishPickaxe extends ItemPickaxe {
         this.setUnlocalizedName("djpickaxe");
         this.setTextureName(Reference.MODID + ":" + "djpickaxe");
         this.setCreativeTab(MyTab.CreaTab);
-    }
+     }
 }

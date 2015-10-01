@@ -17,7 +17,7 @@ public class BiomeRegistry {
     public static BiomeGenBase biomeLead;
     public static void initBiome() {
 
-        biomeLead = new BiomeGenLead(137).setBiomeName("DJ Lead").setTemperatureRainfall(1.2F, 0.9F);
+        biomeLead = new BiomeGenLead(137).setBiomeName("Whish County").setTemperatureRainfall(1.2F, 0.9F);
 
     }
 

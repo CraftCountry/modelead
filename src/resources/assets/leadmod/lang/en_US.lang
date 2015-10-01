@@ -1,4 +1,4 @@
-item.leadmod:UnobtainiumShard.name=Unobtainium Shard
+item.leadmod:UnobtainiumShard.name=Unobtainium Dust
 item.leadmod:UnobtainiumFragment.name=Unobtainium Fragment
 item.leadmod:UnobtainiumPart.name=Unobtainium Part
 item.leadmod:Unobtainium.name=Unobtainium
@@ -6,11 +6,17 @@ item.leadmod:Hardtofindium.name=Hardtofindium
 item.leadmod:Impossibrium.name=Impossibrium
 item.leadmod:whishalloy.name=Whish Alloy
 
-item.djsword.name=DJ Sword
-item.djpickaxe.name=DJ Pickaxe
+item.djsword.name=Whish Sword
+item.djpickaxe.name=Whish Pickaxe
 item.whishapple.name=Whish Apple
 item.thoughtapple.name=Thought Apple
 item.dealseed.name=Deal Seed
+item.whishhelmet.name=Whish Helmet
+item.whishchestplate.name=Whish Chestplate
+item.whishleggings.name=Whish Leggings
+item.whishboots.name=Whish Boots
 
 tile.leadmod:rocklight.name=Rocky Light
 tile.leadmod:unobtainiumore.name=Unobtainium Ore
+
+generator.lead=Default + Whish

@@ -19,10 +19,10 @@ public class BiomeGenLead extends BiomeGenBase{
         this.theBiomeDecorator.grassPerChunk = 3;
         this.theBiomeDecorator.deadBushPerChunk = 10;
         this.theBiomeDecorator.bigMushroomsPerChunk = 3;
-
+        this.setDisableRain();
 
         this.topBlock = Blocks.grass;
-        this.fillerBlock = MyBlocks.unobtainiumore;
+        this.fillerBlock = Blocks.sandstone;
 
     }
 }

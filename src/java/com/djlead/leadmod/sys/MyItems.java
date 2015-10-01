@@ -19,8 +19,13 @@ public class MyItems {
     //    diamond       3           1561        8.0F            7.0F           10
     //    gold                      32          12.0F           4.0F            22
 
-
+    public static ItemArmor.ArmorMaterial whishArmor = EnumHelper.addArmorMaterial("whisharmor", 38, new int[]{3, 8, 6, 3},30);
+                                                                    //durability,  (max 20pts over: helmet, chest, legging, boots), enchantability
+    // durability : leather (5), chain/iron(15), gold(7), diamond(33)
     //  public static final BaseItem ring = new LeadRing();
+
+    
+
     public static final BaseItem unobtainiumShard = new UnobtainiumShard();
     public static final BaseItem unobtainiumFragment = new UnobtainiumFragment();
     public static final BaseItem unobtainiumPart = new UnobtainiumPart();
@@ -31,6 +36,11 @@ public class MyItems {
     public static final ItemPickaxe djPickaxe = new WhishPickaxe();
     public static final ItemSword djSword = new WhishSword();
     public static final ItemSeeds dealSeed = new DealSeed();
+
+    public static final Item whishHelmet = new WhishArmor("whishhelmet",0);
+    public static final Item whishChestplate = new WhishArmor("whishchestplate",1);
+    public static final Item whishLeggings = new WhishArmor("whishleggings",2);
+    public static final Item whishBoots = new WhishArmor("whishboots",3);
 
 
     // Food
@@ -48,6 +58,10 @@ public class MyItems {
         GameRegistry.registerItem(djPickaxe, "WhishPickaxe");
         GameRegistry.registerItem(djSword, "WhishSword");
         GameRegistry.registerItem(dealSeed, "DealSeed");
+        GameRegistry.registerItem(whishHelmet, "WhishHelmet");
+        GameRegistry.registerItem(whishChestplate, "WhishChestplate");
+        GameRegistry.registerItem(whishLeggings, "WhishLeggings");
+        GameRegistry.registerItem(whishBoots, "WhishBoots");
 
         GameRegistry.registerItem(thoughtApple , "ThoughtApple");
         GameRegistry.registerItem(whishApple, "WhishApple");
