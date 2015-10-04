@@ -4,7 +4,7 @@ Minecraft Forge Mod for Minecraft 1.7.10. Aiming to make a mod for end-game: har
 New items and features are added continiously...
 
 # Crops
-Amongst the tall grass you can find rare seeds that will grow the Deal Crops. When full grown they will drop a new seed and an Unobtainium Sharp.
+Amongst the tall grass you can find rare seeds that will grow the Deal Crops. When full grown they will drop a new seed and an Unobtainium Shard.
 
 # Unobtainium progression
 Unobtainium can be found is small quantities in the deepest crevices of the world and in random places in lava in the Nether. The orad to follow to make something usefull out of it is hard and long. It also requires a shitload of resources and time, but the final result is satisfying. Minimum mining level is Diamond, so bring the proper tool.
