@@ -29,5 +29,8 @@ The drops from the Whish Tree (Rambutan) can be peeled and the fruits are nutric
 # Thought Soil
 This is an improved type of dirt, all plants can grow on it, doing it a bit faster than on regular dirt. It is also a component in the process of making Whish Soil, the ultimate base for your garden.
 
+# Whish Soil
+A top tear Soil, anything grows on it, no tilling required and it emits a bit of light
+
 # Whish Armor
 When you finally have Whish Armor, it's time to make some decent armor from it. A full set can be produced: helmet, chestplate, leggings and boots.
