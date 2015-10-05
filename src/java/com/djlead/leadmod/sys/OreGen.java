@@ -38,7 +38,7 @@ public class OreGen implements IWorldGenerator{
     }
 
     public void generateOverworld(World world, Random random, int x, int z){
-        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 1, 2, 50, 11, 27, Blocks.stone);
+        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 1, 4, 50, 11, 27, Blocks.stone);
 //        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 2, 10, 25, 3, 100, Blocks.grass);
     }
 

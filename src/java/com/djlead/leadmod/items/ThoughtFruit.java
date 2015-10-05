@@ -7,8 +7,8 @@ import net.minecraft.item.ItemFood;
 /** Thought Apple - Good Food
  * Created by Lead on 28-9-2015.
  */
-public class ThoughtApple extends ItemFood {
-    public ThoughtApple() {
+public class ThoughtFruit extends ItemFood {
+    public ThoughtFruit() {
 
         super(6, 1.0F, false);
         //  healing , saturation , wolve food
@@ -19,8 +19,8 @@ public class ThoughtApple extends ItemFood {
         //  Cooked Porkchop or Beef 8 	0.8f
         //  Golden Apple 	        4 	1.2f
 
-        this.setUnlocalizedName("thoughtapple");
-        this.setTextureName(Reference.MODID + ":" + "thoughtapple");
+        this.setUnlocalizedName("thoughtfruit");
+        this.setTextureName(Reference.MODID + ":" + "thoughtfruit");
         this.setCreativeTab(MyTab.CreaTab);
         this.setAlwaysEdible();
     }

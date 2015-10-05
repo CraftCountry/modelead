@@ -14,9 +14,9 @@ import net.minecraft.world.World;
  */
 
 
-public class WhishApple extends ItemFood {
+public class WhishFruit extends ItemFood {
 
-    public WhishApple() {
+    public WhishFruit() {
         super(10, 1.4F, true);
         //  healing , saturation , wolve food
         //  ---------------------------------
@@ -26,8 +26,8 @@ public class WhishApple extends ItemFood {
         //  Cooked Porkchop or Beef 8 	0.8f
         //  Golden Apple 	        4 	1.2f
 
-        this.setUnlocalizedName("whishapple");
-        this.setTextureName(Reference.MODID + ":" + "whishapple");
+        this.setUnlocalizedName("whishfruit");
+        this.setTextureName(Reference.MODID + ":" + "whishfruit");
         this.setCreativeTab(MyTab.CreaTab);
         this.maxStackSize  = 16;
         this.setAlwaysEdible();

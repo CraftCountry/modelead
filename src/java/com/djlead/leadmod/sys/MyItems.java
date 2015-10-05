@@ -32,7 +32,7 @@ public class MyItems {
     public static final BaseItem unobtainium = new Unobtainium();
     public static final BaseItem hardtofindium = new Hardtofindium();
     public static final BaseItem impossibrium = new Impossibrium();
-    public static final BaseItem wishAlloy = new WhishAlloy();
+    public static final BaseItem whishalloy = new WhishAlloy();
     public static final ItemPickaxe djPickaxe = new WhishPickaxe();
     public static final ItemSword djSword = new WhishSword();
     public static final ItemSeeds dealSeed = new DealSeed();
@@ -42,10 +42,12 @@ public class MyItems {
     public static final Item whishLeggings = new WhishArmor("whishleggings",2);
     public static final Item whishBoots = new WhishArmor("whishboots",3);
 
-
+    public static final Rambutan rambutan = new Rambutan();
+    public static final RambutanShell rambutanShell = new RambutanShell();
     // Food
-    public static final WhishApple whishApple = new WhishApple();
-    public static final ThoughtApple thoughtApple = new ThoughtApple();
+    public static final RambutanFruit rambutanFruit = new RambutanFruit();
+    public static final WhishFruit whishApple = new WhishFruit();
+    public static final ThoughtFruit thoughtFruit = new ThoughtFruit();
 
     public static void init() {
         GameRegistry.registerItem(unobtainiumShard, "UnobtainiumShard");
@@ -54,7 +56,7 @@ public class MyItems {
         GameRegistry.registerItem(unobtainium, "Unobtainium");
         GameRegistry.registerItem(hardtofindium, "Hardtofindium");
         GameRegistry.registerItem(impossibrium, "Impossibrium");
-        GameRegistry.registerItem(wishAlloy, "WhishAlloy");
+        GameRegistry.registerItem(whishalloy, "WhishAlloy");
         GameRegistry.registerItem(djPickaxe, "WhishPickaxe");
         GameRegistry.registerItem(djSword, "WhishSword");
         GameRegistry.registerItem(dealSeed, "DealSeed");
@@ -63,8 +65,12 @@ public class MyItems {
         GameRegistry.registerItem(whishLeggings, "WhishLeggings");
         GameRegistry.registerItem(whishBoots, "WhishBoots");
 
-        GameRegistry.registerItem(thoughtApple , "ThoughtApple");
-        GameRegistry.registerItem(whishApple, "WhishApple");
+        GameRegistry.registerItem(rambutan , "Rambutan");
+        GameRegistry.registerItem(rambutanShell , "RambutanShell");
+
+        GameRegistry.registerItem(rambutanFruit , "RambutanFruit");
+        GameRegistry.registerItem(thoughtFruit, "ThoughtFruit");
+        GameRegistry.registerItem(whishApple, "WhishFruit");
 
     }
 }

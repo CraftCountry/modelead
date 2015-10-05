@@ -1,7 +1,6 @@
 package com.djlead.leadmod.biome;
 
 import net.minecraft.world.gen.layer.GenLayer;
-import net.minecraft.world.gen.layer.GenLayerBiome;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,14 +43,14 @@ public class LeadGenLayerBiome extends GenLayer
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.swampland, 10));
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.plains, 10));
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.taiga, 10));
-            biomes[desertIdx].add(new BiomeEntry(BiomeRegistry.biomeLead, 40));
+            biomes[desertIdx].add(new BiomeEntry(MyBiome.biomeLead, 40));
         }
         else
         {
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.desert, 30));
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.savanna, 20));
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.plains, 10));
-            biomes[desertIdx].add(new BiomeEntry(BiomeRegistry.biomeLead, 40));
+            biomes[desertIdx].add(new BiomeEntry(MyBiome.biomeLead, 40));
         }
     }
 

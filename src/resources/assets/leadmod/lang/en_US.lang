@@ -6,10 +6,15 @@ item.leadmod:Hardtofindium.name=Hardtofindium
 item.leadmod:Impossibrium.name=Impossibrium
 item.leadmod:whishalloy.name=Whish Alloy
 
+item.leadmod:rambutan.name=Rambutan
+item.rambutanfruit.name=Rambutan Fruit
+item.leadmod:rambutanshell.name=Rambutan Shell
+
 item.djsword.name=Whish Sword
 item.djpickaxe.name=Whish Pickaxe
-item.whishapple.name=Whish Apple
-item.thoughtapple.name=Thought Apple
+
+item.whishfruit.name=Whish Fruit
+item.thoughtfruit.name=Thought Fruit
 item.dealseed.name=Deal Seed
 item.whishhelmet.name=Whish Helmet
 item.whishchestplate.name=Whish Chestplate
@@ -18,5 +23,12 @@ item.whishboots.name=Whish Boots
 
 tile.leadmod:rocklight.name=Rocky Light
 tile.leadmod:unobtainiumore.name=Unobtainium Ore
+tile.leadmod:whishalloyblock.name=Block of Whish Alloy
+tile.leadmod:thoughtsoil.name=Thought Soil
+tile.leadmod:whishsoil.name=Whish Soil
+
+tile.logbt.name=Whish Wood
+tile.leavesbt.name=Whish Leaves
+tile.saplingbt.name=Whish Sappling
 
 generator.lead=Default + Whish

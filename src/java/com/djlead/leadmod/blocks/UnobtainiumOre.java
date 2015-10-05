@@ -18,12 +18,9 @@ public class UnobtainiumOre extends BaseBlock {
     public UnobtainiumOre() {
         super();
         this.setBlockName("unobtainiumore");
-        this.setHardness(5.0F);
+        this.setHardness(2.0F);
         this.setResistance(20.0F);
         this.setHarvestLevel("pickaxe", 2);
-        // this.setStepSound(soundTypePiston);
-        // this.setLightLevel(0.0F);
-
     }
 
     @Override
@@ -66,11 +63,9 @@ public class UnobtainiumOre extends BaseBlock {
     @SideOnly(Side.CLIENT)
     public void randomDisplayTick(World world, int x, int y, int z, Random random)
     {
-//        if (this.field_150187_a)        {
+//       if (this.field_150187_a)        {
             this.CreateParticle(world, x, y, z);
-//            this.CreateParticle(world, x, y, z);
-//            this.CreateParticle(world, x, y, z);
-//        }
+//      }
     }
 
 

@@ -3,10 +3,11 @@ package com.djlead.leadmod;
 
 //import com.djlead.leadmod.worldgen.WorldGeneratorOre;
 
-import com.djlead.leadmod.biome.BiomeRegistry;
+import com.djlead.leadmod.biome.MyBiome;
 import com.djlead.leadmod.biome.WorldTypeLead;
 import com.djlead.leadmod.proxy.CommonProxy;
 import com.djlead.leadmod.sys.*;
+import com.djlead.leadmod.sys.TreeGen;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -55,7 +56,10 @@ public class Main {
         MyBlocks.init();
         MyItems.init();
         GameRegistry.registerWorldGenerator(new OreGen(), 0);
-        BiomeRegistry.mainRegister();
+        MyBiome.initBiome();
+        MyBiome.registerBiome();
+
+//      GameRegistry.registerWorldGenerator (new TreeGen(true));
 
         LogOut.info("Pre Init Complete");
     }

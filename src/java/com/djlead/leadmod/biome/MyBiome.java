@@ -7,22 +7,22 @@ import net.minecraftforge.common.BiomeManager;
 /**
  * Created by Lead on 29-9-2015.
  */
-public class BiomeRegistry {
+public class MyBiome {
 
-    public static void mainRegister() {
-        initBiome();
-        registerBiome();
-    }
+//    public static void biomeRegister() {
+//        initBiome();
+//        registerBiome();
+//    }
 
     public static BiomeGenBase biomeLead;
     public static void initBiome() {
 
-        biomeLead = new BiomeGenLead(137).setBiomeName("Whish County").setTemperatureRainfall(1.2F, 0.9F);
+        biomeLead = new BiomeGenLead(137).setBiomeName("Whish County");
 
     }
 
     public static void  registerBiome(){
-        BiomeDictionary.registerBiomeType(biomeLead, BiomeDictionary.Type.PLAINS);
+        BiomeDictionary.registerBiomeType(biomeLead, BiomeDictionary.Type.HILLS);
         BiomeManager.addSpawnBiome(biomeLead);
     }
 
