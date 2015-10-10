@@ -34,3 +34,7 @@ One of the very few rare earth metals is Whish Alloy, it is used to make the mos
 
 # Whish Armor
 When you finally have Whish Armor, it's time to make some decent armor from it. A full set can be produced: helmet, chestplate, leggings and boots.
+- Whish Helmet
+- Whish Chestplate
+- Whish Leggings
+- Whish Boots
