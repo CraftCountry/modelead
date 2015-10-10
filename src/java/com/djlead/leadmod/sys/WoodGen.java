@@ -9,7 +9,6 @@ import net.minecraft.block.BlockSapling;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityChest;
-import net.minecraft.util.Direction;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -34,14 +33,12 @@ public class WoodGen extends WorldGenAbstractTree {
         super(p_i2028_1_);
         this.minTreeHeight = minheight;
         this.vinesGrow = vinesgrow;
-//        this.vinesGrow = false;
     }
 
     public boolean generate(World world, Random random, int posX, int posY, int posZ)    {
 
         // height of tree
         int height = 3 + random.nextInt(12) + this.minTreeHeight;
-//        int height = 10 + this.minTreeHeight;
         boolean flag = true;
 
         // If : tree has enough height between surface and upper world limit (256)
@@ -54,7 +51,6 @@ public class WoodGen extends WorldGenAbstractTree {
             // check if tree can grow at least to 2 block height (check is 2 trunk logs can be placed
             for (int i1 = posY; i1 <= posY + 2; ++i1){
                 b0 = 1;
-
                 if (i1 == posY){ b0 = 0; }
                 if (i1 >= posY + 1 + height - 2) { b0 = 2; }
 
@@ -83,12 +79,7 @@ public class WoodGen extends WorldGenAbstractTree {
                 if (isSoil && posY < 256 - height - 1) {
 
                     // if all criteria are ok
-
-
                     block2.onPlantGrow(world, posX, posY - 1, posZ, posX, posY, posZ);
-
-                    LogOut.info ("minTreeHeight: " + this.minTreeHeight);
-                    LogOut.info("height: " + height);
 
                     // build mid section of the tree, widening
                     for (int midsection = 0; midsection <= height-this.minTreeHeight; ++midsection) {
@@ -102,16 +93,12 @@ public class WoodGen extends WorldGenAbstractTree {
                         //                    // Outer roow
                         this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ, MyBlocks.leavesBT, 0);
                         this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+1, MyBlocks.leavesBT, 0);
-
                         this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ, MyBlocks.leavesBT, 0);
                         this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+1, MyBlocks.leavesBT, 0);
-
                         this.setBlockAndNotifyAdequately(world, posX, putY, posZ-2, MyBlocks.leavesBT, 0);
                         this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-1, MyBlocks.leavesBT, 0);
-
                         this.setBlockAndNotifyAdequately(world, posX, putY, posZ+2, MyBlocks.leavesBT, 0);
                         this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-1, MyBlocks.leavesBT, 0);
-
 
                         if (random.nextInt(1) == 1) {
                             this.setBlockAndNotifyAdequately(world, posX+3, putY, posZ, MyBlocks.leavesBT, 0);
@@ -121,7 +108,6 @@ public class WoodGen extends WorldGenAbstractTree {
                             this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+2, MyBlocks.leavesBT, 0);
                             this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ+1, MyBlocks.leavesBT, 0);
                             this.setBlockAndNotifyAdequately(world, posX-3, putY, posZ, MyBlocks.leavesBT, 0);
-
                             this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ-1, MyBlocks.leavesBT, 0);
                             this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-2, MyBlocks.leavesBT, 0);
                             this.setBlockAndNotifyAdequately(world, posX, putY, posZ-3, MyBlocks.leavesBT, 0);
@@ -129,17 +115,14 @@ public class WoodGen extends WorldGenAbstractTree {
                             this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ-1, MyBlocks.leavesBT, 0);
                         }
                         if (height-this.minTreeHeight > 8) {
-
                             if (midsection > 1 && midsection < height-this.minTreeHeight-3) {
+
                                 this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ, MyBlocks.logBT, 0);
                                 this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+1, MyBlocks.logBT, 0);
-
                                 this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ, MyBlocks.logBT, 0);
                                 this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+1, MyBlocks.logBT, 0);
-
                                 this.setBlockAndNotifyAdequately(world, posX, putY, posZ-2, MyBlocks.logBT, 0);
                                 this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-1, MyBlocks.logBT, 0);
-
                                 this.setBlockAndNotifyAdequately(world, posX, putY, posZ+2, MyBlocks.logBT, 0);
                                 this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-1, MyBlocks.logBT, 0);
 
@@ -190,8 +173,6 @@ public class WoodGen extends WorldGenAbstractTree {
                         }
                         this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-2, MyBlocks.leavesBT, 0);
                         this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ-1, MyBlocks.leavesBT, 0);
-
-
                     }
 
                     // Loot hidden in the top of the tree
@@ -204,10 +185,9 @@ public class WoodGen extends WorldGenAbstractTree {
                         tile.setInventorySlotContents(random.nextInt(18), new ItemStack(MyItems.whishApple, random.nextInt(4)));
                         tile.setInventorySlotContents(random.nextInt(18), new ItemStack(MyItems.thoughtFruit, random.nextInt(16)));
                     }
-
+                    /////////////////
                     // build Top section
-
-
+                    /////////////////////
                     // Inner row
                     ++putY;
                     this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ, MyBlocks.logBT, 0);
@@ -219,20 +199,14 @@ public class WoodGen extends WorldGenAbstractTree {
                     //                    // Outer roow
                     this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ, MyBlocks.leavesBT, 0);
                     this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+1, MyBlocks.leavesBT, 0);
-
                     this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ, MyBlocks.leavesBT, 0);
                     this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+1, MyBlocks.leavesBT, 0);
-
                     this.setBlockAndNotifyAdequately(world, posX, putY, posZ-2, MyBlocks.leavesBT, 0);
                     this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-1, MyBlocks.leavesBT, 0);
-
                     this.setBlockAndNotifyAdequately(world, posX, putY, posZ+2, MyBlocks.leavesBT, 0);
                     this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-1, MyBlocks.leavesBT, 0);
 
-
-
                     // Real top tippy
-
                     for (int i=0;i<1 + random.nextInt(3);++i) {
                         ++putY;
                         this.setBlockAndNotifyAdequately(world, posX, putY, posZ, MyBlocks.logBT, 0);
@@ -245,16 +219,12 @@ public class WoodGen extends WorldGenAbstractTree {
                         //                    // Outer roow
                         this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ, MyBlocks.leavesBT, 0);
                         this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+1, MyBlocks.leavesBT, 0);
-
                         this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ, MyBlocks.leavesBT, 0);
                         this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+1, MyBlocks.leavesBT, 0);
-
                         this.setBlockAndNotifyAdequately(world, posX, putY, posZ-2, MyBlocks.leavesBT, 0);
                         this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-1, MyBlocks.leavesBT, 0);
-
                         this.setBlockAndNotifyAdequately(world, posX, putY, posZ+2, MyBlocks.leavesBT, 0);
                         this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-1, MyBlocks.leavesBT, 0);
-
                     }
 
                     for (int i=0;i< 2 + random.nextInt(4);++i) {
@@ -272,91 +242,28 @@ public class WoodGen extends WorldGenAbstractTree {
                         this.setBlockAndNotifyAdequately(world, posX, putY, posZ, MyBlocks.leavesBT, 0);
                     }
 
-
-
-
-
-
-
-                    b0 = 3;         // leaves radius
-                    byte b1 = 0;
+                    ///////////
+                    // vines + trunk
                     int l1;
                     int i2;
                     int j2;
                     int i3;
-
-                    // tree top filling
-//                    for (k1 = posY - b0 + height; k1 <= posY + height; ++k1) {
-//                        i3 = k1 - (posY + height);
-//                        l1 = b1 + 1 - i3 / 3;
-//
-//                        for (i2 = posX - l1; i2 <= posX + l1; ++i2){
-//                            j2 = i2 - posX;
-//
-//                            for (int k2 = posZ - l1; k2 <= posZ + l1; ++k2) {
-//                                int l2 = k2 - posZ;
-//
-//                                if (Math.abs(j2) != l1 || Math.abs(l2) != l1 || random.nextInt(15) != 0 && i3 != 0){
-//                                    Block block1 = world.getBlock(i2, k1, k2);
-//
-//                                    if (block1.isAir(world, i2, k1, k2) || block1.isLeaves(world, i2, k1, k2)){
-//                                        this.setBlockAndNotifyAdequately(world, i2, k1, k2, MyBlocks.logBT, 0);
-//                                    }
-//                                }
-//                            }
-//                        }
-//                    }
-
-
-//                    b0 = 2;         // leaves setting !!
-//                    b1 = 0;
-//                    for (k1 = posY - b0 + 1; k1 <= posY + height; ++k1) {
-//                        i3 = k1 - (posY + height);
-//                        l1 = b1 + 1 - i3 / 2;
-//
-//                        for (i2 = posX - l1; i2 <= posX + l1; ++i2){
-//                            j2 = i2 - posX;
-//
-//                            for (int k2 = posZ - l1; k2 <= posZ + l1; ++k2) {
-//                                int l2 = k2 - posZ;
-//
-//                                if (Math.abs(j2) != l1 || Math.abs(l2) != l1 || random.nextInt(5) != 0 && i3 != 0){
-//                                    Block block1 = world.getBlock(i2, k1+3, k2);
-//
-//                                    if (block1.isAir(world, i2, k1+3, k2) && !block1.isWood(world, i2, k1+3, k2)){
-////                                        if (block1.isAir(world, i2, k1+3, k2) ){
-//                                        this.setBlockAndNotifyAdequately(world, i2, k1+3, k2, MyBlocks.leavesBT, 0);
-//                                    }
-//                                }
-//                            }
-//                        }
-//                    }
-
-
-                    ///////////
-                    // vines + trunk
-
-                    for (k1 = 0; k1 < height; ++k1)
-                    {
+                    for (k1 = 0; k1 < height; ++k1) {
                         block = world.getBlock(posX, posY + k1, posZ);
 
                         if (block.isAir(world, posX, posY + k1, posZ) || block.isLeaves(world, posX, posY + k1, posZ))  {
                             this.setBlockAndNotifyAdequately(world, posX, posY + k1, posZ, MyBlocks.logBT, 0);      // tree trunk material
 
-
                             if (this.vinesGrow && k1 > 0)                            {
                                 if (random.nextInt(3) > 0 && world.isAirBlock(posX - 1, posY + k1, posZ)) {
                                     this.setBlockAndNotifyAdequately(world, posX - 1, posY + k1, posZ, Blocks.vine, 8);
                                 }
-
                                 if (random.nextInt(3) > 0 && world.isAirBlock(posX + 1, posY + k1, posZ))  {
                                     this.setBlockAndNotifyAdequately(world, posX + 1, posY + k1, posZ, Blocks.vine, 2);
                                 }
-
                                 if (random.nextInt(3) > 0 && world.isAirBlock(posX, posY + k1, posZ - 1)) {
                                     this.setBlockAndNotifyAdequately(world, posX, posY + k1, posZ - 1, Blocks.vine, 1);
                                 }
-
                                 if (random.nextInt(3) > 0 && world.isAirBlock(posX, posY + k1, posZ + 1)) {
                                     this.setBlockAndNotifyAdequately(world, posX, posY + k1, posZ + 1, Blocks.vine, 4);
                                 }
@@ -375,15 +282,12 @@ public class WoodGen extends WorldGenAbstractTree {
                                         if (random.nextInt(4) == 0 && world.getBlock(i2 - 1, k1, j2).isAir(world, i2 - 1, k1, j2)){
                                             this.growVines(world, i2 - 1, k1, j2, 8);
                                         }
-
                                         if (random.nextInt(4) == 0 && world.getBlock(i2 + 1, k1, j2).isAir(world, i2 + 1, k1, j2)) {
                                             this.growVines(world, i2 + 1, k1, j2, 2);
                                         }
-
                                         if (random.nextInt(4) == 0 && world.getBlock(i2, k1, j2 - 1).isAir(world, i2, k1, j2 - 1)) {
                                             this.growVines(world, i2, k1, j2 - 1, 1);
                                         }
-
                                         if (random.nextInt(4) == 0 && world.getBlock(i2, k1, j2 + 1).isAir(world, i2, k1, j2 + 1)){
                                             this.growVines(world, i2, k1, j2 + 1, 4);
                                         }
@@ -391,19 +295,7 @@ public class WoodGen extends WorldGenAbstractTree {
                                 }
                             }
                         }
-//                         // cocoa beans
-//                        if (random.nextInt(5) == 0 && height > 5){
-//                            for (k1 = 0; k1 < 2; ++k1) {
-//                                for (i3 = 0; i3 < 4; ++i3){
-//                                    if (random.nextInt(4 - k1) == 0) {
-//                                        l1 = random.nextInt(3);
-//                                        this.setBlockAndNotifyAdequately(world, posX + Direction.offsetX[Direction.rotateOpposite[i3]], posY + height - 5 + k1, posZ + Direction.offsetZ[Direction.rotateOpposite[i3]], Blocks.cocoa, l1 << 2 | i3);
-//                                    }
-//                                }
-//                            }
-//                        }
                     }
-
                     return true;
                 } else {
                     return false;
