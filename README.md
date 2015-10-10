@@ -7,7 +7,7 @@ New items and features are added continiously...
 There are still nice places on the map to explore...
 
 # Whish Tree
-A tree in a distinct shape, offering a nice chunk of wood in the top, there are little sapling drops so use the saplings you have wisely.
+A tree in a distinct shape, it's a long tall appearance in the landscape that offers lots of wood and healthy food. And if your lucky, a treat near the top.
 
 # Rambutan
 The Rambutan are the drops from the Whish Tree.
