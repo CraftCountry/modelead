@@ -88,7 +88,8 @@ public class SaplingBT extends BlockSapling implements IGrowable {
     {
         if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(world, random, posX, posY, posZ)) return;
         int l = world.getBlockMetadata(posX, posY, posZ) & 7;
-        Object object = random.nextInt(3) == 0 ? new WoodGen(true,12,true) : new WoodGen(true);
+        int randheight = random.nextInt(12);
+        Object object = random.nextInt(3) == 0 ? new WoodGen(true,randheight,true) : new WoodGen(true,randheight,true);
         int i1 = 0;                                     // ^ some randomness in height, default is 8
         int j1 = 0;
         boolean flag = false;
@@ -96,7 +97,7 @@ public class SaplingBT extends BlockSapling implements IGrowable {
         switch (l)
         {
             case 0:
-                object = new WoodGen(true);
+                object = new WoodGen(true,randheight,true);
                 break;
             case 1:
                 break;
