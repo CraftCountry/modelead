@@ -8,8 +8,8 @@ import net.minecraft.world.gen.layer.GenLayerZoom;
 /**
  * Created by Lead on 29-9-2015.
  */
-public class WorldTypeLead extends WorldType {
-    public WorldTypeLead(int par1, String name){
+public class BiomeTypeWhish extends WorldType {
+    public BiomeTypeWhish(int par1, String name){
         super(name);
     }
 

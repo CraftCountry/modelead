@@ -205,10 +205,10 @@ public class LeavesBT extends BlockLeavesBase implements IShearable {
     }
 
     /**
-     * Returns the quantity of items to drop on block destruction.
+     * Returns the quantity of items to drop on block destruction. Dropchance of Saplings
      */
     public int quantityDropped(Random p_149745_1_) {
-        return p_149745_1_.nextInt(20) == 0 ? 1 : 0;
+        return p_149745_1_.nextInt(80) == 0 ? 1 : 0;
     }
 
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {

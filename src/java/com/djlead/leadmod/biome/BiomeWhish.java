@@ -8,9 +8,9 @@ import net.minecraft.world.biome.BiomeGenBase;
 /**
  * Created by Lead on 29-9-2015.
  */
-public class BiomeGenLead extends BiomeGenBase{
+public class BiomeWhish extends BiomeGenBase{
 
-    public BiomeGenLead(int id){
+    public BiomeWhish(int id){
         super(id);
         // environmental
         this.rootHeight = 0.125F;

@@ -23,13 +23,11 @@ public class RockLight extends BaseBlock {
     @Override
     public boolean isOpaqueCube(){
         return false;
-        // does block let light shine through
     }
 
     @Override
     public Item getItemDropped(int metadata, Random random, int fortune){
         return MyItems.impossibrium;
-        // what item to drop
     }
 
     @Override

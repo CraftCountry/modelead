@@ -1,9 +1,11 @@
 package com.djlead.leadmod.sys;
 
+import com.djlead.leadmod.biome.features.FeatureTest;
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
@@ -33,13 +35,24 @@ public class OreGen implements IWorldGenerator{
         }
     }
 
-    public void generateNether(World world, Random random, int x, int z){
-        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 2, 10, 5, 3, 100, Blocks.lava);
+    public void generateNether(World world, Random random, int posX, int posZ){
+        generateOre(MyBlocks.unobtainiumore, world, random, posX, posZ, 2, 10, 5, 3, 100, Blocks.lava);
     }
 
-    public void generateOverworld(World world, Random random, int x, int z){
-        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 1, 4, 50, 11, 27, Blocks.stone);
+    public void generateOverworld(World world, Random random, int posX, int posZ){
+        generateOre(MyBlocks.unobtainiumore, world, random, posX, posZ, 1, 4, 50, 11, 27, Blocks.stone);
 //        generateOre(MyBlocks.unobtainiumore, world, random, x, z, 2, 10, 25, 3, 100, Blocks.grass);
+
+        // generate custom structure
+        BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(posX, posZ);
+//        if (biome == BiomeGenBase.plains) {
+            int putX = posX + random.nextInt(256);
+            int putZ= posZ + random.nextInt(256);
+            int putY = world.getHeightValue(putX,putZ);
+            new FeatureTest().generate(world,random,putX,putY,putZ);
+
+//        }
+
     }
 
     public void generateEnd(World world, Random random, int x, int z){
@@ -57,4 +70,7 @@ public class OreGen implements IWorldGenerator{
             gen.generate(world, random, randX, randY, randZ);
         }
     }
+
+
+
 }

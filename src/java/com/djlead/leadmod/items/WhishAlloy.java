@@ -7,7 +7,7 @@ public class WhishAlloy extends BaseItem {
 
     public WhishAlloy() {
         super();
-        this.maxStackSize = 18;
+        this.maxStackSize = 32;
         this.setUnlocalizedName("whishalloy");
     }
 }

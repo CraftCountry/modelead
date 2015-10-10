@@ -3,7 +3,7 @@ package com.djlead.leadmod.blocks;
 
 import com.djlead.leadmod.Reference;
 import com.djlead.leadmod.sys.MyTab;
-import com.djlead.leadmod.sys.TreeGen;
+import com.djlead.leadmod.sys.WoodGen;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -88,7 +88,7 @@ public class SaplingBT extends BlockSapling implements IGrowable {
     {
         if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(world, random, posX, posY, posZ)) return;
         int l = world.getBlockMetadata(posX, posY, posZ) & 7;
-        Object object = random.nextInt(3) == 0 ? new TreeGen(true,12,true) : new TreeGen(true);
+        Object object = random.nextInt(3) == 0 ? new WoodGen(true,12,true) : new WoodGen(true);
         int i1 = 0;                                     // ^ some randomness in height, default is 8
         int j1 = 0;
         boolean flag = false;
@@ -96,7 +96,7 @@ public class SaplingBT extends BlockSapling implements IGrowable {
         switch (l)
         {
             case 0:
-                object = new TreeGen(true);
+                object = new WoodGen(true);
                 break;
             case 1:
                 break;

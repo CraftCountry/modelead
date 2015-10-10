@@ -36,7 +36,7 @@ public class ThoughtSoil extends BaseBlock {
         this.setHardness(1.0F);
         this.setResistance(2.0F);
         this.setHarvestLevel("shovel", 1);
-//        this.setTickRandomly(true);
+        this.setTickRandomly(true);
     }
 
     /**

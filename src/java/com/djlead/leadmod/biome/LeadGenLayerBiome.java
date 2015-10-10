@@ -43,14 +43,14 @@ public class LeadGenLayerBiome extends GenLayer
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.swampland, 10));
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.plains, 10));
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.taiga, 10));
-            biomes[desertIdx].add(new BiomeEntry(MyBiome.biomeLead, 40));
+            biomes[desertIdx].add(new BiomeEntry(MyBiome.biomeWhish, 30));
         }
         else
         {
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.desert, 30));
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.savanna, 20));
             biomes[desertIdx].add(new BiomeEntry(BiomeGenBase.plains, 10));
-            biomes[desertIdx].add(new BiomeEntry(MyBiome.biomeLead, 40));
+            biomes[desertIdx].add(new BiomeEntry(MyBiome.biomeWhish, 40));
         }
     }
 

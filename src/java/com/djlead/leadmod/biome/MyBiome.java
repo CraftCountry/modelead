@@ -9,22 +9,13 @@ import net.minecraftforge.common.BiomeManager;
  */
 public class MyBiome {
 
-//    public static void biomeRegister() {
-//        initBiome();
-//        registerBiome();
-//    }
-
-    public static BiomeGenBase biomeLead;
+    public static BiomeGenBase biomeWhish;
     public static void initBiome() {
-
-        biomeLead = new BiomeGenLead(137).setBiomeName("Whish County");
-
+        biomeWhish = new BiomeWhish(137).setBiomeName("Whish County");
     }
 
     public static void  registerBiome(){
-        BiomeDictionary.registerBiomeType(biomeLead, BiomeDictionary.Type.HILLS);
-        BiomeManager.addSpawnBiome(biomeLead);
+        BiomeDictionary.registerBiomeType(biomeWhish, BiomeDictionary.Type.HILLS);
+        BiomeManager.addSpawnBiome(biomeWhish);
     }
-
-
 }
