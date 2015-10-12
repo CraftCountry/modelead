@@ -3,11 +3,14 @@ package com.djlead.leadmod.blocks;
 import com.djlead.leadmod.sys.MyItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -21,7 +24,9 @@ public class UnobtainiumOre extends BaseBlock {
         this.setHardness(2.0F);
         this.setResistance(20.0F);
         this.setHarvestLevel("pickaxe", 2);
+//        this.slipperiness = 1.25F;      // .98 = ice /  >1.25 is crazy
     }
+
 
     @Override
     public boolean isOpaqueCube(){
@@ -32,7 +37,7 @@ public class UnobtainiumOre extends BaseBlock {
 //    Drop a single item
 
 //    @Override
-//    public Item getItemDropped(int metadata, Random random, int fortune){
+//    public Item getItemDropped(int metadata, Random random, int fortune) {
 //        return MyItems.unobtainiumShard;
 //        // what item to drop
 //    }
@@ -55,21 +60,17 @@ public class UnobtainiumOre extends BaseBlock {
 
     // particles
 
-    private boolean field_150187_a;
-
     /**
      * A randomly called display update to be able to add particles or other items for display
      */
     @SideOnly(Side.CLIENT)
-    public void randomDisplayTick(World world, int x, int y, int z, Random random)
-    {
-//       if (this.field_150187_a)        {
-            this.CreateParticle(world, x, y, z);
-//      }
+    public void randomDisplayTick(World world, int posX, int posY, int posZ, Random random){
+        if (random.nextInt(6) == 0) {                                                      // set the chance to sparkle
+            this.CreateParticle(world, posX, posY, posZ);
+        }
     }
 
-
-    private void CreateParticle(World world, int posX, int posY, int posZ)    {
+    private void CreateParticle(World world, int posX, int posY, int posZ) {
         Random random = world.rand;
         double d0 = 0.0625D;
 
@@ -78,11 +79,11 @@ public class UnobtainiumOre extends BaseBlock {
             double d2 = (double)((float)posY + random.nextFloat());
             double d3 = (double)((float)posZ + random.nextFloat());
 
-            if (l == 0 && !world.getBlock(posX, posY + 1, posZ).isOpaqueCube())            {
+            if (l == 0 && !world.getBlock(posX, posY + 1, posZ).isOpaqueCube()) {
                 d2 = (double)(posY + 1) + d0;
             }
 
-            if (l == 1 && !world.getBlock(posX, posY - 1, posZ).isOpaqueCube()){
+            if (l == 1 && !world.getBlock(posX, posY - 1, posZ).isOpaqueCube()) {
                 d2 = (double)(posY + 0) - d0;
             }
 
@@ -94,11 +95,11 @@ public class UnobtainiumOre extends BaseBlock {
                 d3 = (double)(posZ + 0) - d0;
             }
 
-            if (l == 4 && !world.getBlock(posX + 1, posY, posZ).isOpaqueCube()){
+            if (l == 4 && !world.getBlock(posX + 1, posY, posZ).isOpaqueCube()) {
                 d1 = (double)(posX + 1) + d0;
             }
 
-            if (l == 5 && !world.getBlock(posX - 1, posY, posZ).isOpaqueCube()){
+            if (l == 5 && !world.getBlock(posX - 1, posY, posZ).isOpaqueCube()) {
                 d1 = (double)(posX + 0) - d0;
             }
 
@@ -133,7 +134,6 @@ public class UnobtainiumOre extends BaseBlock {
 //                world.spawnParticle("heart", d1, d2, d3, 0.0D, 0.0D, 0.0D);           // animals breed
 //                world.spawnParticle("angryVillager", d1, d2, d3, 0.0D, 0.0D, 0.0D);        // steam/flame rise up
 //                world.spawnParticle("happyVillager", d1, d2, d3, 0.0D, 0.0D, 0.0D);        // green fonkles
-
             }
         }
     }

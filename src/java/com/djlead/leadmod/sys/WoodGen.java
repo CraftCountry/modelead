@@ -19,6 +19,7 @@ import java.util.Random;
 /**
  * Created by Lead on 3-10-2015.
  */
+
 public class WoodGen extends WorldGenAbstractTree {
 
     private final int minTreeHeight;
@@ -177,6 +178,8 @@ public class WoodGen extends WorldGenAbstractTree {
 
                     // Loot hidden in the top of the tree
                     int putY = posY + height;
+
+
                     this.setBlockAndNotifyAdequately(world, posX, putY, posZ, Blocks.gold_block, 0);
 
                     this.setBlockAndNotifyAdequately(world, posX, putY+1, posZ, Blocks.chest, 0);
@@ -271,31 +274,31 @@ public class WoodGen extends WorldGenAbstractTree {
                         }
                     }
 
-                    if (this.vinesGrow){
-                        for (k1 = posY - 3 + height; k1 <= posY + height; ++k1){
-                            i3 = k1 - (posY + height);
-                            l1 = 2 - i3 / 2;
-
-                            for (i2 = posX - l1; i2 <= posX + l1; ++i2){
-                                for (j2 = posZ - l1; j2 <= posZ + l1; ++j2) {
-                                    if (world.getBlock(i2, k1, j2).isLeaves(world, i2, k1, j2)) {
-                                        if (random.nextInt(4) == 0 && world.getBlock(i2 - 1, k1, j2).isAir(world, i2 - 1, k1, j2)){
-                                            this.growVines(world, i2 - 1, k1, j2, 8);
-                                        }
-                                        if (random.nextInt(4) == 0 && world.getBlock(i2 + 1, k1, j2).isAir(world, i2 + 1, k1, j2)) {
-                                            this.growVines(world, i2 + 1, k1, j2, 2);
-                                        }
-                                        if (random.nextInt(4) == 0 && world.getBlock(i2, k1, j2 - 1).isAir(world, i2, k1, j2 - 1)) {
-                                            this.growVines(world, i2, k1, j2 - 1, 1);
-                                        }
-                                        if (random.nextInt(4) == 0 && world.getBlock(i2, k1, j2 + 1).isAir(world, i2, k1, j2 + 1)){
-                                            this.growVines(world, i2, k1, j2 + 1, 4);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+//                    if (this.vinesGrow){
+//                        for (k1 = posY - 3 + height; k1 <= posY + height; ++k1){
+//                            i3 = k1 - (posY + height);
+//                            l1 = 2 - i3 / 2;
+//
+//                            for (i2 = posX - l1; i2 <= posX + l1; ++i2){
+//                                for (j2 = posZ - l1; j2 <= posZ + l1; ++j2) {
+//                                    if (world.getBlock(i2, k1, j2).isLeaves(world, i2, k1, j2)) {
+//                                        if (random.nextInt(4) == 0 && world.getBlock(i2 - 1, k1, j2).isAir(world, i2 - 1, k1, j2)){
+//                                            this.growVines(world, i2 - 1, k1, j2, 8);
+//                                        }
+//                                        if (random.nextInt(4) == 0 && world.getBlock(i2 + 1, k1, j2).isAir(world, i2 + 1, k1, j2)) {
+//                                            this.growVines(world, i2 + 1, k1, j2, 2);
+//                                        }
+//                                        if (random.nextInt(4) == 0 && world.getBlock(i2, k1, j2 - 1).isAir(world, i2, k1, j2 - 1)) {
+//                                            this.growVines(world, i2, k1, j2 - 1, 1);
+//                                        }
+//                                        if (random.nextInt(4) == 0 && world.getBlock(i2, k1, j2 + 1).isAir(world, i2, k1, j2 + 1)){
+//                                            this.growVines(world, i2, k1, j2 + 1, 4);
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
                     return true;
                 } else {
                     return false;

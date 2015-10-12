@@ -5,6 +5,7 @@ import cpw.mods.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
 
 /** LogOut - Helper file to output to console with Modid prefix
+ *  ie.         LogOut.info("Pre Init Complete");
  * Created by Lead on 26-9-2015.
  */
 public class LogOut {

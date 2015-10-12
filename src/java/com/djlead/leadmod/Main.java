@@ -13,6 +13,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+
+
+import net.minecraft.entity.player.PlayerCapabilities;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.WorldType;
@@ -60,7 +63,7 @@ public class Main {
         MyBiome.initBiome();
         MyBiome.registerBiome();
 
-   //   GameRegistry.registerWorldGenerator (new WoodGen(true,8,false));
+//     GameRegistry.registerWorldGenerator (new WoodGen(true,8,false));
 
         LogOut.info("Pre Init Complete");
     }
@@ -69,6 +72,7 @@ public class Main {
     public void init(FMLInitializationEvent event) {
         // Add custom recipes
         MyRecipes.init();
+
         MinecraftForge.addGrassSeed(new ItemStack(MyItems.dealSeed), 2);
         LogOut.info("Init Complete");
     }

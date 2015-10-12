@@ -12,7 +12,7 @@ public class MyTab {
 
         @Override
         public Item getTabIconItem() {
-            return MyItems.impossibrium;
+            return MyItems.whishalloy;
         }
 
         @Override

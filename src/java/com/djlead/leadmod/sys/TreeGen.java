@@ -136,8 +136,7 @@ public class TreeGen extends WorldGenAbstractTree {
                     ///////////
                     // vines
 
-                    for (k1 = 0; k1 < l; ++k1)
-                    {
+                    for (k1 = 0; k1 < l; ++k1){
                         block = world.getBlock(posX, posY + k1, posZ);
 
                         if (block.isAir(world, posX, posY + k1, posZ) || block.isLeaves(world, posX, posY + k1, posZ))  {
