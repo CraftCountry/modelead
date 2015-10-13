@@ -101,9 +101,9 @@ public class LeavesBT extends BlockLeavesBase implements IShearable {
     /**
      * Ticks the block if it's been scheduled
      */
-    public void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_) {
-        if (!p_149674_1_.isRemote) {
-            int l = p_149674_1_.getBlockMetadata(p_149674_2_, p_149674_3_, p_149674_4_);
+    public void updateTick(World world, int posX, int posY, int posZ, Random random) {
+        if (!world.isRemote) {
+            int l = world.getBlockMetadata(posX, posY, posZ);
 
             if ((l & 8) != 0 && (l & 4) == 0) {
                 byte b0 = 4;
@@ -118,17 +118,17 @@ public class LeavesBT extends BlockLeavesBase implements IShearable {
 
                 int l1;
 
-                if (p_149674_1_.checkChunksExist(p_149674_2_ - i1, p_149674_3_ - i1, p_149674_4_ - i1, p_149674_2_ + i1, p_149674_3_ + i1, p_149674_4_ + i1)) {
+                if (world.checkChunksExist(posX - i1, posY - i1, posZ - i1, posX + i1, posY + i1, posZ + i1)) {
                     int i2;
                     int j2;
 
                     for (l1 = -b0; l1 <= b0; ++l1) {
                         for (i2 = -b0; i2 <= b0; ++i2) {
                             for (j2 = -b0; j2 <= b0; ++j2) {
-                                Block block = p_149674_1_.getBlock(p_149674_2_ + l1, p_149674_3_ + i2, p_149674_4_ + j2);
+                                Block block = world.getBlock(posX + l1, posY + i2, posZ + j2);
 
-                                if (!block.canSustainLeaves(p_149674_1_, p_149674_2_ + l1, p_149674_3_ + i2, p_149674_4_ + j2)) {
-                                    if (block.isLeaves(p_149674_1_, p_149674_2_ + l1, p_149674_3_ + i2, p_149674_4_ + j2)) {
+                                if (!block.canSustainLeaves(world, posX + l1, posY + i2, posZ + j2)) {
+                                    if (block.isLeaves(world, posX + l1, posY + i2, posZ + j2)) {
                                         this.field_150128_a[(l1 + k1) * j1 + (i2 + k1) * b1 + j2 + k1] = -2;
                                     } else {
                                         this.field_150128_a[(l1 + k1) * j1 + (i2 + k1) * b1 + j2 + k1] = -1;
@@ -178,9 +178,9 @@ public class LeavesBT extends BlockLeavesBase implements IShearable {
                 l1 = this.field_150128_a[k1 * j1 + k1 * b1 + k1];
 
                 if (l1 >= 0) {
-                    p_149674_1_.setBlockMetadataWithNotify(p_149674_2_, p_149674_3_, p_149674_4_, l & -9, 4);
+                    world.setBlockMetadataWithNotify(posX, posY, posZ, l & -9, 4);
                 } else {
-                    this.removeLeaves(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_);
+                    this.removeLeaves(world, posX, posY, posZ);
                 }
             }
         }
@@ -190,36 +190,36 @@ public class LeavesBT extends BlockLeavesBase implements IShearable {
      * A randomly called display update to be able to add particles or other items for display
      */
     @SideOnly(Side.CLIENT)
-    public void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_) {
-        if (p_149734_1_.canLightningStrikeAt(p_149734_2_, p_149734_3_ + 1, p_149734_4_) && !World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && p_149734_5_.nextInt(15) == 1) {
-            double d0 = (double) ((float) p_149734_2_ + p_149734_5_.nextFloat());
-            double d1 = (double) p_149734_3_ - 0.05D;
-            double d2 = (double) ((float) p_149734_4_ + p_149734_5_.nextFloat());
-            p_149734_1_.spawnParticle("dripWater", d0, d1, d2, 0.0D, 0.0D, 0.0D);
+    public void randomDisplayTick(World world, int posX, int posY, int posZ, Random random) {
+        if (world.canLightningStrikeAt(posX, posY + 1, posZ) && !World.doesBlockHaveSolidTopSurface(world, posX, posY - 1, posZ) && random.nextInt(15) == 1) {
+            double d0 = (double) ((float) posX + random.nextFloat());
+            double d1 = (double) posY - 0.05D;
+            double d2 = (double) ((float) posZ + random.nextFloat());
+            world.spawnParticle("dripWater", d0, d1, d2, 0.0D, 0.0D, 0.0D);
         }
     }
 
-    private void removeLeaves(World p_150126_1_, int p_150126_2_, int p_150126_3_, int p_150126_4_) {
-        this.dropBlockAsItem(p_150126_1_, p_150126_2_, p_150126_3_, p_150126_4_, p_150126_1_.getBlockMetadata(p_150126_2_, p_150126_3_, p_150126_4_), 0);
-        p_150126_1_.setBlockToAir(p_150126_2_, p_150126_3_, p_150126_4_);
+    private void removeLeaves(World world, int posX, int posY, int posZ) {
+        this.dropBlockAsItem(world, posX, posY, posZ, world.getBlockMetadata(posX, posY, posZ), 0);
+        world.setBlockToAir(posX, posY, posZ);
     }
 
     /**
      * Returns the quantity of items to drop on block destruction. Dropchance of Saplings
      */
-    public int quantityDropped(Random p_149745_1_) {
-        return p_149745_1_.nextInt(80) == 0 ? 1 : 0;
+    public int quantityDropped(Random random) {
+        return random.nextInt(60) == 0 ? 1 : 0;
     }
 
-    public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
+    public Item getItemDropped(int p_149650_1_, Random random, int p_149650_3_) {
         return Item.getItemFromBlock(MyBlocks.sapplingBT);
     }
 
     /**
      * Drops the block items with a specified chance of dropping the specified items
      */
-    public void dropBlockAsItemWithChance(World p_149690_1_, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_) {
-        super.dropBlockAsItemWithChance(p_149690_1_, p_149690_2_, p_149690_3_, p_149690_4_, p_149690_5_, 1.0f, p_149690_7_);
+    public void dropBlockAsItemWithChance(World random, int p_149690_2_, int p_149690_3_, int p_149690_4_, int p_149690_5_, float p_149690_6_, int p_149690_7_) {
+        super.dropBlockAsItemWithChance(random, p_149690_2_, p_149690_3_, p_149690_4_, p_149690_5_, 1.0f, p_149690_7_);
     }
 
     protected void func_150124_c(World p_150124_1_, int p_150124_2_, int p_150124_3_, int p_150124_4_, int p_150124_5_, int p_150124_6_) {
@@ -233,9 +233,9 @@ public class LeavesBT extends BlockLeavesBase implements IShearable {
      * Called when the player destroys a block with an item that can harvest it. (i, j, k) are the coordinates of the
      * block and l is the block's subtype/damage.
      */
-    public void harvestBlock(World p_149636_1_, EntityPlayer p_149636_2_, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_) {
+    public void harvestBlock(World world, EntityPlayer player, int p_149636_3_, int p_149636_4_, int p_149636_5_, int p_149636_6_) {
         {
-            super.harvestBlock(p_149636_1_, p_149636_2_, p_149636_3_, p_149636_4_, p_149636_5_, p_149636_6_);
+            super.harvestBlock(world, player, p_149636_3_, p_149636_4_, p_149636_5_, p_149636_6_);
         }
     }
 
@@ -304,36 +304,36 @@ public class LeavesBT extends BlockLeavesBase implements IShearable {
     }
 
     @Override
-    public boolean isShearable(ItemStack item, IBlockAccess world, int x, int y, int z) {
+    public boolean isShearable(ItemStack item, IBlockAccess world, int posX, int posY, int posZ) {
         return true;
     }
 
     @Override
-    public ArrayList<ItemStack> onSheared(ItemStack item, IBlockAccess world, int x, int y, int z, int fortune) {
+    public ArrayList<ItemStack> onSheared(ItemStack item, IBlockAccess world, int posX, int posY, int posZ, int fortune) {
         ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
-        ret.add(new ItemStack(this, 1, world.getBlockMetadata(x, y, z) & 3));
+        ret.add(new ItemStack(this, 1, world.getBlockMetadata(posX, posY, posZ) & 3));
         return ret;
     }
 
     @Override
-    public void beginLeavesDecay(World world, int x, int y, int z) {
+    public void beginLeavesDecay(World world, int posX, int posY, int posZ) {
 
-        int i2 = world.getBlockMetadata(x, y, z);
+        int i2 = world.getBlockMetadata(posX, posY, posZ);
 
         if ((i2 & 8) == 0) {
-            world.setBlockMetadataWithNotify(x, y, z, i2 | 8, 4);
+            world.setBlockMetadataWithNotify(posX, posY, posZ, i2 | 8, 4);
         }
-        world.setBlockMetadataWithNotify(x, y, z, world.getBlockMetadata(x, y, z) | 8, 4);
+        world.setBlockMetadataWithNotify(posX, posY, posZ, world.getBlockMetadata(posX, posY, posZ) | 8, 4);
     }
 
     @Override
-    public boolean isLeaves(IBlockAccess world, int x, int y, int z) {
+    public boolean isLeaves(IBlockAccess world, int posX, int posY, int posZ) {
         return true;
     }
 
 
     @Override
-    public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
+    public ArrayList<ItemStack> getDrops(World world, int posX, int posY, int posZ, int metadata, int fortune) {
         ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
 
         if (world.rand.nextFloat() < 0.025F)
@@ -357,7 +357,7 @@ public class LeavesBT extends BlockLeavesBase implements IShearable {
         }
 
         this.captureDrops(true);
-        this.func_150124_c(world, x, y, z, metadata, chance); // Dammet mojang
+        this.func_150124_c(world, posX, posY, posZ, metadata, chance); // Dammet mojang
         ret.addAll(this.captureDrops(false));
         return ret;
     }
