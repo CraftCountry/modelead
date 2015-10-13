@@ -25,7 +25,7 @@ import java.util.Random;
  * Created by Lead on 5-10-2015.
  */
 
-public class WhishSoil extends Block {
+public class WhishSoil extends BaseBlock {
     @SideOnly(Side.CLIENT)
     private IIcon field_149824_a;
     @SideOnly(Side.CLIENT)
@@ -76,8 +76,9 @@ public class WhishSoil extends Block {
      */
     @SideOnly(Side.CLIENT)
     public IIcon getIcon(int p_149691_1_, int p_149691_2_){
-  //      return p_149691_1_ == 1 ? (p_149691_2_ > 0 ? this.field_149824_a : this.field_149823_b) : Blocks.dirt.getBlockTextureFromSide(p_149691_1_);
-        return Blocks.wool.getBlockTextureFromSide(p_149691_1_);
+
+        return p_149691_1_ == 1 ? (p_149691_2_ > 0 ? this.field_149824_a : this.field_149823_b) : Blocks.dirt.getBlockTextureFromSide(p_149691_1_);
+
     }
 
     /**
