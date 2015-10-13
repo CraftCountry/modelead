@@ -200,15 +200,14 @@ public class WhishSoil extends BaseBlock {
 
 
         /////
-        switch (plantType) {
-            case Crop:
-                return true;
-            default:
-                LogOut.info("last return" + plant);
-           //     return super.canSustainPlant(world, posX, posY, posZ, direction, plantable);
+//        switch (plantType) {
+//            case Crop:
+//                return true;
+//            default:
+            //     return super.canSustainPlant(world, posX, posY, posZ, direction, plantable);
             return true; // otherwise seed gets popped out
-
-        }
+//
+//        }
     }
 }
 

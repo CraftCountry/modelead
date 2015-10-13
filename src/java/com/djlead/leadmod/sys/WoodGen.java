@@ -85,101 +85,104 @@ public class WoodGen extends WorldGenAbstractTree {
                     // build mid section of the tree, widening
                     for (int midsection = 0; midsection <= height-this.minTreeHeight; ++midsection) {
                         int putY = posY + this.minTreeHeight + midsection;
-                        this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ, MyBlocks.logBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ, MyBlocks.logBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX, putY, posZ-1, MyBlocks.logBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX, putY, posZ + 1, MyBlocks.logBT, 0);
 
-                        // Leafs
-                        //                    // Outer roow
-                        this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ, MyBlocks.leavesBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+1, MyBlocks.leavesBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ, MyBlocks.leavesBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+1, MyBlocks.leavesBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX, putY, posZ-2, MyBlocks.leavesBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-1, MyBlocks.leavesBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX, putY, posZ+2, MyBlocks.leavesBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-1, MyBlocks.leavesBT, 0);
+                        RingSmall(world, posX, posY, posZ, MyBlocks.logBT);
 
-                        if (random.nextInt(1) == 1) {
-                            this.setBlockAndNotifyAdequately(world, posX+3, putY, posZ, MyBlocks.leavesBT, 0);
-                            this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ+1, MyBlocks.leavesBT, 0);
-                            this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+2, MyBlocks.leavesBT, 0);
-                            this.setBlockAndNotifyAdequately(world, posX, putY, posZ+3, MyBlocks.leavesBT, 0);
-                            this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+2, MyBlocks.leavesBT, 0);
-                            this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ+1, MyBlocks.leavesBT, 0);
-                            this.setBlockAndNotifyAdequately(world, posX-3, putY, posZ, MyBlocks.leavesBT, 0);
-                            this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ-1, MyBlocks.leavesBT, 0);
-                            this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-2, MyBlocks.leavesBT, 0);
-                            this.setBlockAndNotifyAdequately(world, posX, putY, posZ-3, MyBlocks.leavesBT, 0);
-                            this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-2, MyBlocks.leavesBT, 0);
-                            this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ-1, MyBlocks.leavesBT, 0);
-                        }
-                        if (height-this.minTreeHeight > 8) {
-                            if (midsection > 1 && midsection < height-this.minTreeHeight-3) {
+//                        this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ, MyBlocks.logBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ, MyBlocks.logBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX, putY, posZ-1, MyBlocks.logBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX, putY, posZ + 1, MyBlocks.logBT, 0);
 
-                                this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ, MyBlocks.logBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+1, MyBlocks.logBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ, MyBlocks.logBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+1, MyBlocks.logBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX, putY, posZ-2, MyBlocks.logBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-1, MyBlocks.logBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX, putY, posZ+2, MyBlocks.logBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-1, MyBlocks.logBT, 0);
-
-                                // Leafs
-                                this.setBlockAndNotifyAdequately(world, posX + 3, putY, posZ, MyBlocks.leavesBT, 0);
-                                if (random.nextInt(2)==1) {
-                                    this.setBlockAndNotifyAdequately(world, posX + 4, putY, posZ, MyBlocks.leavesBT, 0);
-                                }
-                                this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ+1, MyBlocks.leavesBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+2, MyBlocks.leavesBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX, putY, posZ + 3, MyBlocks.leavesBT, 0);
-                                if (random.nextInt(2)==1) {
-                                    this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ + 2, MyBlocks.leavesBT, 0);
-                                }
-                                this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+2, MyBlocks.leavesBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ+1, MyBlocks.leavesBT, 0);
-                                if (random.nextInt(2)==1) {
-                                    this.setBlockAndNotifyAdequately(world, posX - 3, putY, posZ, MyBlocks.leavesBT, 0);
-                                }
-                                this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ-1, MyBlocks.leavesBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-2, MyBlocks.leavesBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX, putY, posZ - 3, MyBlocks.leavesBT, 0);
-                                if (random.nextInt(2)==1) {
-                                    this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ - 3, MyBlocks.leavesBT, 0);
-                                }
-                                this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-2, MyBlocks.leavesBT, 0);
-                                this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ-1, MyBlocks.leavesBT, 0);
-                            }
-                        }
-                        ++putY;
-                        if (random.nextInt(3)==1) {
-                            this.setBlockAndNotifyAdequately(world, posX + 3, putY, posZ, MyBlocks.leavesBT, 0);
-                        }
-                        this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ+1, MyBlocks.leavesBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+2, MyBlocks.leavesBT, 0);
-                        if (random.nextInt(5)==1) {
-                            this.setBlockAndNotifyAdequately(world, posX, putY, posZ + 3, MyBlocks.leavesBT, 0);
-                        }
-                        this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+2, MyBlocks.leavesBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ+1, MyBlocks.leavesBT, 0);
-                        if (random.nextInt(4)==1) {
-                            this.setBlockAndNotifyAdequately(world, posX - 3, putY, posZ, MyBlocks.leavesBT, 0);
-                        }
-                        this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ-1, MyBlocks.leavesBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-2, MyBlocks.leavesBT, 0);
-                        if (random.nextInt(6)==1) {
-                            this.setBlockAndNotifyAdequately(world, posX, putY, posZ - 3, MyBlocks.leavesBT, 0);
-                        }
-                        this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-2, MyBlocks.leavesBT, 0);
-                        this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ-1, MyBlocks.leavesBT, 0);
+//                        // Leafs
+//                        //                    // Outer roow
+//                        this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ, MyBlocks.leavesBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+1, MyBlocks.leavesBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ, MyBlocks.leavesBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+1, MyBlocks.leavesBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX, putY, posZ-2, MyBlocks.leavesBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-1, MyBlocks.leavesBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX, putY, posZ+2, MyBlocks.leavesBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-1, MyBlocks.leavesBT, 0);
+//
+//                        if (random.nextInt(1) == 1) {
+//                            this.setBlockAndNotifyAdequately(world, posX+3, putY, posZ, MyBlocks.leavesBT, 0);
+//                            this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ+1, MyBlocks.leavesBT, 0);
+//                            this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+2, MyBlocks.leavesBT, 0);
+//                            this.setBlockAndNotifyAdequately(world, posX, putY, posZ+3, MyBlocks.leavesBT, 0);
+//                            this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+2, MyBlocks.leavesBT, 0);
+//                            this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ+1, MyBlocks.leavesBT, 0);
+//                            this.setBlockAndNotifyAdequately(world, posX-3, putY, posZ, MyBlocks.leavesBT, 0);
+//                            this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ-1, MyBlocks.leavesBT, 0);
+//                            this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-2, MyBlocks.leavesBT, 0);
+//                            this.setBlockAndNotifyAdequately(world, posX, putY, posZ-3, MyBlocks.leavesBT, 0);
+//                            this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-2, MyBlocks.leavesBT, 0);
+//                            this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ-1, MyBlocks.leavesBT, 0);
+//                        }
+//                        if (height-this.minTreeHeight > 8) {
+//                            if (midsection > 1 && midsection < height-this.minTreeHeight-3) {
+//
+//                                this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ, MyBlocks.logBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+1, MyBlocks.logBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ, MyBlocks.logBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+1, MyBlocks.logBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX, putY, posZ-2, MyBlocks.logBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-1, MyBlocks.logBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX, putY, posZ+2, MyBlocks.logBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-1, MyBlocks.logBT, 0);
+//
+//                                // Leafs
+//                                this.setBlockAndNotifyAdequately(world, posX + 3, putY, posZ, MyBlocks.leavesBT, 0);
+//                                if (random.nextInt(2)==1) {
+//                                    this.setBlockAndNotifyAdequately(world, posX + 4, putY, posZ, MyBlocks.leavesBT, 0);
+//                                }
+//                                this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ+1, MyBlocks.leavesBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+2, MyBlocks.leavesBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX, putY, posZ + 3, MyBlocks.leavesBT, 0);
+//                                if (random.nextInt(2)==1) {
+//                                    this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ + 2, MyBlocks.leavesBT, 0);
+//                                }
+//                                this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+2, MyBlocks.leavesBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ+1, MyBlocks.leavesBT, 0);
+//                                if (random.nextInt(2)==1) {
+//                                    this.setBlockAndNotifyAdequately(world, posX - 3, putY, posZ, MyBlocks.leavesBT, 0);
+//                                }
+//                                this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ-1, MyBlocks.leavesBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-2, MyBlocks.leavesBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX, putY, posZ - 3, MyBlocks.leavesBT, 0);
+//                                if (random.nextInt(2)==1) {
+//                                    this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ - 3, MyBlocks.leavesBT, 0);
+//                                }
+//                                this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-2, MyBlocks.leavesBT, 0);
+//                                this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ-1, MyBlocks.leavesBT, 0);
+//                            }
+//                        }
+//                        ++putY;
+//                        if (random.nextInt(3)==1) {
+//                            this.setBlockAndNotifyAdequately(world, posX + 3, putY, posZ, MyBlocks.leavesBT, 0);
+//                        }
+//                        this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ+1, MyBlocks.leavesBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ+2, MyBlocks.leavesBT, 0);
+//                        if (random.nextInt(5)==1) {
+//                            this.setBlockAndNotifyAdequately(world, posX, putY, posZ + 3, MyBlocks.leavesBT, 0);
+//                        }
+//                        this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ+2, MyBlocks.leavesBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ+1, MyBlocks.leavesBT, 0);
+//                        if (random.nextInt(4)==1) {
+//                            this.setBlockAndNotifyAdequately(world, posX - 3, putY, posZ, MyBlocks.leavesBT, 0);
+//                        }
+//                        this.setBlockAndNotifyAdequately(world, posX-2, putY, posZ-1, MyBlocks.leavesBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX-1, putY, posZ-2, MyBlocks.leavesBT, 0);
+//                        if (random.nextInt(6)==1) {
+//                            this.setBlockAndNotifyAdequately(world, posX, putY, posZ - 3, MyBlocks.leavesBT, 0);
+//                        }
+//                        this.setBlockAndNotifyAdequately(world, posX+1, putY, posZ-2, MyBlocks.leavesBT, 0);
+//                        this.setBlockAndNotifyAdequately(world, posX+2, putY, posZ-1, MyBlocks.leavesBT, 0);
                     }
 
                     // Loot hidden in the top of the tree
                     int putY = posY + height;
 
-
+                    // hide treasure in tree
                     this.setBlockAndNotifyAdequately(world, posX, putY, posZ, Blocks.gold_block, 0);
 
                     this.setBlockAndNotifyAdequately(world, posX, putY+1, posZ, Blocks.chest, 0);
@@ -188,6 +191,7 @@ public class WoodGen extends WorldGenAbstractTree {
                         tile.setInventorySlotContents(random.nextInt(18), new ItemStack(MyItems.whishApple, random.nextInt(4)));
                         tile.setInventorySlotContents(random.nextInt(18), new ItemStack(MyItems.thoughtFruit, random.nextInt(16)));
                     }
+
                     /////////////////
                     // build Top section
                     /////////////////////
@@ -322,6 +326,21 @@ public class WoodGen extends WorldGenAbstractTree {
             }
             this.setBlockAndNotifyAdequately(world, posX, posY, posZ, Blocks.vine, vinesgrow);
             --i1;
+        }
+    }
+
+    private void RingSmall (World world, int posX, int posY, int posZ, Block block){
+        PlaceBlock(world, posX-1, posY, posZ, block);
+        PlaceBlock(world, posX + 1, posY, posZ, block);
+        PlaceBlock(world, posX, posY, posZ - 1, block);
+        PlaceBlock(world, posX, posY, posZ + 1, block);
+    }
+
+    private void PlaceBlock (World world, int posX, int posY, int posZ, Block block3) {
+        block3 = world.getBlock(posX, posY, posZ);
+        if (block3.isAir(world, posX, posY, posZ) || block3.isLeaves(world, posX, posY, posZ))  {
+            this.setBlockAndNotifyAdequately(world, posX, posY, posZ, block3, 0);
+            LogOut.info(posX);
         }
     }
 }
